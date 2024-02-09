@@ -40,6 +40,7 @@ Running a single test:
 4. Run genSyslog.pl to verify it is working as expected
 
 Multiple runs:
+
 5. Edit testharness.pl, and configure the Settings section
 6. Run testharness.pl
 
