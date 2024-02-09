@@ -3,7 +3,7 @@
 #
 # This tool was created to test maximum throughput on a single connection, or
 # across multiple connections, when delivering to the Syslog source in 
-# Cribl Stream.   
+# Cribl Stream, or to any other Syslog destination such as rsyslog, Syslog-NG
 #
 # The tool supports delivery to Cribl Stream using
 #    * zero, one, or two TCP connections
@@ -50,14 +50,14 @@ use Log::Syslog::Fast ':all';
 #
 ##### SETTINGS
 #
-my $loghost='default.main.eloquent-lumiere-gzz5b98.cribl.cloud';  	# EDIT TO YOUR INSTANCE!
+my $loghost='your-hostname-here';  	# EDIT TO YOUR INSTANCE!
 my $runtime=30;	# max seconds to run.  Set to 0 for unlimited.
 my $count=0;	# max iterations to send.  Set to 0 for unlimited.
 my $sendUDP=0;  # set to 0 to disable, 1 to enable
 my $sendTCP=1;  # set to 0, 1, or 2 TCP threads for sending.
 my $appname;	# defaults to 'datatest'
 my $hostname = 'firewall1';	# defaults to 'myhost'
-my $use_rfc_5424=0;	#Set to 1 to enable RFC5424 format, 0 to disable
+my $use_rfc_5424=1;	#Set to 1 to enable RFC5424 format, 0 to disable
 my $udpPort = 9514;	# match this port to your syslog source
 my $tcpPort1 = 9514;	# match this port to your syslog source
 my $tcpPort2 = 9514;	# match this port to your syslog source

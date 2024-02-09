@@ -5,7 +5,7 @@
 # collecting output from each run, and providing an analysis of the top results.
 #
 # This was created specifically for real-world throughput testing using the 
-# genSyslog.pl script.  That sciprt's final line of output shows the
+# genSyslog.pl script.  That script's final line of output shows the
 # overall throughput of that specific run.
 #
 # To use configure the test harness, 
